@@ -8,8 +8,6 @@ public class Menu {
         int operationSelect;
             // Вибір операції - шифрування або розшифрування
          operationSelect = new Operation().operationSelection();
-
-
         switch (operationSelect) {
             case 1 -> encryptRun();
             case 2 -> decryptRun();
@@ -21,6 +19,8 @@ public class Menu {
     arrayCharFile = ReadFile.readFileToChar();
     yourShiftKey = new KeySelection().selectKey();
     EncryptionProcess encryptionProcess = new EncryptionProcess(arrayCharFile, yourShiftKey);
+    encryptionProcess.encrupt1();
+
     }
     public static void decryptRun(){
         choosingEncryptionMethod = new EncryptionMethod().selectEncryptionMethod();
