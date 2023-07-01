@@ -12,8 +12,7 @@ public class Menu {
 
          // Запуск операції шифрування/розшифрування
 
-        public static void choiceMethod();{
-        }
+        public static void choiceMethod;
             /*switch (operationSelect) {
             case 1 -> encryptRun();
             case 2 -> decryptRun();
@@ -29,7 +28,7 @@ public class Menu {
 
     }
     public static void decryptRun(){
-        choosingEncryptionMethod = new EncryptionMethod().selectEncryptionMethod();
+        choosingEncryptionMethod = new ChoiceEncryptionMethod().selectEncryptionMethod();
         arrayCharFile = ReadFile.readFileToChar();
     }
 }
