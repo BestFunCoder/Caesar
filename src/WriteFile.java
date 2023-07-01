@@ -1,7 +1,7 @@
 public class WriteFile {
 
 
-    try {
+   /* try {
         FileWriter writer = new FileWriter("File.txt");
         for (Character ch : list) {
             writer.write(ch);
@@ -13,3 +13,4 @@ public class WriteFile {
     }
 
 }
+*/}

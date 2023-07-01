@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EncryptionMethod {
+public class ChoiceEncryptionMethod extends ChoiceOfAction {
     //private static final String =
     //private static final String =
     private static final String METHOD_BRUTEFORCE = "\nВи обрали метод Brute Force.\n";
