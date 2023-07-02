@@ -3,6 +3,6 @@ public class Main {
         //привітання
         new Greeting().greeting();
         //запуск програми
-        Menu.starting();
+        new Menu().starting();
     }
 }
