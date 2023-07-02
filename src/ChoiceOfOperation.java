@@ -4,29 +4,29 @@ public class ChoiceOfOperation extends ChoiceOfAction {
             2 - Розшифровування.
             3 - Вихід в головне меню.
             4 - Вихід з програми.""";
-    public final String SELECTION_POSITION_1 = "\nВи обрали операцію - Шифрування.\n";
-    public final String SELECTION_POSITION_2 = "\nВи обрали операцію - Розшифровування.\n";
-    public final String SELECTION_POSITION_3 = "\nВи обрали вихід в головне меню.\n";
-    public final String SELECTION_POSITION_4 = "\nВи обрали вихід з програми. Допобачення!";
+    public final String SELECTION_POSITION_1 = "\n-Ви обрали операцію - Шифрування.-\n";
+    public final String SELECTION_POSITION_2 = "\n-Ви обрали операцію - Розшифровування.-\n";
+    public final String SELECTION_POSITION_3 = "\n-Ви обрали вихід в головне меню.-\n";
+    public final String SELECTION_POSITION_4 = "\n-Ви обрали вихід з програми. Допобачення!-";
 
-    public String getMENU_ITEMS() {
+    public String getMenuItems() {
         return MENU_ITEMS;
     }
 
-    public void getSELECTION_POSITION_1() {
+    public void getSelectionPosition1() {
         System.out.println(SELECTION_POSITION_1);
     }
 
-    public void getSELECTION_POSITION_2() {
+    public void getSelectionPosition2() {
         System.out.println(SELECTION_POSITION_2);
     }
 
-    public void getSELECTION_POSITION_3() {
+    public void getSelectionPosition3() {
         System.out.println(SELECTION_POSITION_3);
         Menu.starting();
     }
 
-    public void getSELECTION_POSITION_4() {
+    public void getSelectionPosition4() {
         System.out.println(SELECTION_POSITION_4);
         System.exit(0);
     }
