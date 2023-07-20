@@ -1,36 +1,22 @@
 import java.util.ArrayList;
 public class EncryptionProcess {
-    ArrayList<Character> outputCharArr = new ArrayList<>();
-    ArrayList<Character> arrayCharFile = new ArrayList<>();
+
+    ArrayList<Character> arrayListSourceFile;
     int yourShiftKey;
     int newShiftKey;
-    ArrayList<Character> alphabetUkrainian = SampleUkrainianAlphabet.alphabetUa;
+    SampleUkrainianAlphabet sampleUkrainianAlphabet = new SampleUkrainianAlphabet();
+    ArrayList<Character> alphabetUAWithPunctuation = sampleUkrainianAlphabet.getAlphabetUAWithPunctuation();
+    ArrayList<Character> punctuation = sampleUkrainianAlphabet.getPunctuation();
     KeySelection keySelection = new KeySelection();
+    ArrayList<Character> arrayListOutputFile = new ArrayList<>();
+    ArrayList<Character> arrayListEncryptFile = new ArrayList<>();
 
-    private void withKey1() {
-        outputCharArr.add('Г');
-        outputCharArr.add('Ґ');
-        outputCharArr.add('Д');
-    }
-
-    private void withKey2() {
-        outputCharArr.add('Д');
-        outputCharArr.add('Е');
-        outputCharArr.add('Є');
-    }
-
-    private void withKey3() {
-        outputCharArr.add('Є');
-        outputCharArr.add('Ж');
-        outputCharArr.add('З');
-    }
-
-    public EncryptionProcess(ArrayList<Character> arrayCharFile, int yourShiftKey) {
-        this.arrayCharFile = arrayCharFile;
+    public EncryptionProcess(ArrayList<Character> arrayListSourceFile, int yourShiftKey) {
+        this.arrayListSourceFile = arrayListSourceFile;
         this.yourShiftKey = yourShiftKey;
     }
 
-    public void encrupt1() {
+    public ArrayList<Character> encrypt1() {
         if (yourShiftKey == keySelection.yourShiftKey1) {
             withKey1();
         } else if (yourShiftKey == keySelection.yourShiftKey2) {
@@ -39,45 +25,72 @@ public class EncryptionProcess {
             withKey3();
         }
 
-        encrupt2();
+        encrypt2();
+        return arrayListEncryptFile;
     }
 
-    public void encrupt2() {
-        for (int i = 0; i < arrayCharFile.size(); i++) {
+    private void withKey1() {
+        arrayListOutputFile.add('Г');
+        arrayListOutputFile.add('Ґ');
+        arrayListOutputFile.add('Д');
+    }
+
+    private void withKey2() {
+        arrayListOutputFile.add('Д');
+        arrayListOutputFile.add('Е');
+        arrayListOutputFile.add('Є');
+    }
+
+    private void withKey3() {
+        arrayListOutputFile.add('Є');
+        arrayListOutputFile.add('Ж');
+        arrayListOutputFile.add('З');
+    }
+
+
+    public void encrypt2() {
+
+
+        for (Character ch : arrayListSourceFile) {
             //отримуємо чар з масиву-джерела
-            Character ch = arrayCharFile.get(i);
-            //System.out.println(ch);
+
+
+            if (punctuation.contains(ch)) {
+                //encryptionCore(ch);
+                arrayListOutputFile.add(encryptionCore(ch));
+            }
+
             //перевірка чи чар є UpperCase
-            if (Character.isUpperCase(ch)) {
-                // чи є чар в українському алфавіті
-                if (alphabetUkrainian.contains(ch)) {
-                    int ret = alphabetUkrainian.indexOf(ch);
-                    newShiftKey = ret + yourShiftKey;
-                    //зациклення для алфавіту
-                    if (newShiftKey > 40) {
-                        newShiftKey = newShiftKey%41;
-                    }
-                    Character ghhgjg = alphabetUkrainian.get(newShiftKey);
-                    outputCharArr.add(ghhgjg);
-                    // якщо чар LowerCase
-                }
-            }else if (Character.isLowerCase(ch)) {
-                    // Переводимо чар в юперКейс і перевіряємо чи є в українській мові
-                Character ch1 = Character.toUpperCase(ch);
-                    if (alphabetUkrainian.contains(ch1)) {
-                        int ret = alphabetUkrainian.indexOf(ch1);
-                        newShiftKey = ret + yourShiftKey;
-                        //зациклення для алфавіту
-                        if (newShiftKey > 40) {
-                            newShiftKey = newShiftKey % 41;
-                        }
-                        Character ghhgjg = alphabetUkrainian.get(newShiftKey);
-                        outputCharArr.add(Character.toLowerCase(ghhgjg));
-                    }
+            else if (Character.isUpperCase(ch)) {
+                arrayListOutputFile.add(encryptionCore(ch));
+
+
+                // якщо чар LowerCase
+            } else if (Character.isLowerCase(ch)) {
+                // Переводимо чар в юперКейс і перевіряємо чи є в українській мові
+                char chUpperCase = Character.toUpperCase(ch);
+                char tempCh = encryptionCore(chUpperCase);
+                arrayListOutputFile.add(Character.toLowerCase(tempCh));
+
             }
         }
-        for (Character character : outputCharArr) {
-            System.out.print(character);
-        }
+
+        arrayListEncryptFile = arrayListOutputFile;
     }
+
+    public char encryptionCore(char ch) {
+        char temp = '$';
+        if (alphabetUAWithPunctuation.contains(ch)) {
+            int i = alphabetUAWithPunctuation.indexOf(ch);
+            newShiftKey = i + yourShiftKey;
+            //зациклення для алфавіту
+            if (newShiftKey > 40) {
+                newShiftKey = newShiftKey % 41;
+            }
+            temp = alphabetUAWithPunctuation.get(newShiftKey);
+
+        }
+        return temp;
+    }
+
 }

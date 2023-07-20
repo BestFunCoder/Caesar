@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class KeySelection {
-    private static final String SELECT_NUMBER_KEY = ("""
+    private final String SELECT_NUMBER_KEY = ("""
                 Оберіть ключ:
                 1 - Ключ №1.
                 2 - Ключ №2.
                 3 - Ключ №3.
                 """);
-    private static final String YOUR_CHOICE = "Ви обрали ключ №";
-    private static final String ERROR_CHOICE = "Ви помилились у виборі, спробуйте ще раз.";
+    private final String YOUR_CHOICE = "Ви обрали ключ №";
+    private final String ERROR_CHOICE = "Ви помилились у виборі, спробуйте ще раз.";
     int yourKey;
     int yourShiftKey;
     int yourShiftKey1 = 3;
