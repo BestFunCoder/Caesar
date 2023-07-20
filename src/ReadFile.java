@@ -7,21 +7,29 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class ReadFile {
 
-    private static final String SELECTION_ERROR = "\nВи ввели недійсний шлях до файлу.\n" +
+    private final String SELECTION_ERROR = "\n- Ви ввели недійсний шлях до файлу. -\n" +
             "1 - Ввести адресу ще раз.\n" +
             "2 - Вийти в головне меню.\n";
-    private static final String PROMPT_TO_SELECT_FILE = "Даний файл наявний та має правильне розширення.";
-    private static final String ENTER_TO_FILE_PATCH = "Введіть шлях до файлу (розширення .txt):";
+    private final String PROMPT_TO_SELECT_FILE = "- Даний файл наявний та має правильне розширення. -";
+    private final String ENTER_TO_FILE_PATCH = "= Введіть шлях до файлу (розширення .txt): =";
+    private final String NOTHING_ENTERED = "- Ви впевненні, що поле введення не пусте? -";
+    public ArrayList<Character> arrayCharSourceFile = new ArrayList<>();
 
-    static Scanner scanner = new Scanner(System.in);
 
-    public static ArrayList<Character> readFileToChar() {
+
+    public ArrayList<Character> readFileToChar() {
         Path path = null;
-        ArrayList<Character> arrayCharSourceFile = new ArrayList<>();
+        while(path == null) {
+            System.out.println(ENTER_TO_FILE_PATCH);
+            Scanner scanner = new Scanner(System.in);
+            if (scanner.hasNextLine()) {
+                path = Path.of(scanner.nextLine());
 
-        System.out.println(ENTER_TO_FILE_PATCH);
-        if(scanner.hasNextLine()){
-        path = Path.of(scanner.nextLine());
+            } else {
+                System.out.println(NOTHING_ENTERED);
+                readFileToChar();
+            }
+
         }
 
         if (Files.exists(path) && path.toString().endsWith(".txt")) {
@@ -40,10 +48,12 @@ public class ReadFile {
         }
         else {
             System.out.println(SELECTION_ERROR);
+            Scanner scanner = new Scanner(System.in);
             if (scanner.hasNextInt()){
-                if(scanner.nextInt() == 1){
+                int i = scanner.nextInt();
+                if(i == 1){
                     readFileToChar();
-                } else if (scanner.nextInt() == 2) {
+                } else if (i == 2) {
                     new Menu().starting();
                 }
             }
