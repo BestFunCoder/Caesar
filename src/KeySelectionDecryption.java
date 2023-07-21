@@ -1,4 +1,5 @@
 public class KeySelectionDecryption extends ChoiceOfAction{
+    String s = "для пул реквесту";
     private final String MENU_ITEMS = ("""
                 Оберіть ключ:
                 1 - Ключ №1.
