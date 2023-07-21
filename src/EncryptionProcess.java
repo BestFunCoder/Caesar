@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 public class EncryptionProcess {
-
+String s = "для пул реквесту";
     ArrayList<Character> arrayListSourceFile;
     int yourShiftKey;
     int newShiftKey;
