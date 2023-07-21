@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class SampleUkrainianAlphabet {
+public class SampleUkrainianAlphabet {String s = "для пул реквесту";
     private static final Character[] ALPHABET_UKRAINIAN = {'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 'Е', 'Є', 'Ж', 'З', 'И', 'І', 'Ї', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Ю', 'Я'};
     public  List<Character> alphabetUkrainian = new ArrayList<>(Arrays.asList(ALPHABET_UKRAINIAN));
 
