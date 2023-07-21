@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Operation {
+public class Operation {String s = "для пул реквесту";
     private final String OFFER_OF_CHOICE = """
             Виберіть необхідну оперецію.
             Введіть цифру відповідної операції та натисніть Enter:""";
