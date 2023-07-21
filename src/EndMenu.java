@@ -6,22 +6,23 @@ public final class EndMenu extends ChoiceOfAction{
             """;
 
     @Override
-    public String getMenuItems() {
+    public String getMenuItems(){
         return MENU_ITEMS;
     }
+
     @Override
-    public void getSelectionPosition1() {
+    public void getSelectionPosition1(){
         new Menu().starting();
     }
 
     @Override
-    public void getSelectionPosition2() {
+    public void getSelectionPosition2(){
         System.exit(0);
     }
 
 
     @Override
-    public void getSelectionPosition3() {
+    public void getSelectionPosition3(){
        System.out.println(super.ERROR_CHOICE);
        operationSelection();
     }
