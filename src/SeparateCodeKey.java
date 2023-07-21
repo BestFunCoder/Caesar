@@ -26,4 +26,5 @@ public class SeparateCodeKey {
         BruteForceKeyDetermination bruteForceKeyDetermination= new BruteForceKeyDetermination(separateKeyCode);
         return decryptionFileFreeCodeKey;
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
