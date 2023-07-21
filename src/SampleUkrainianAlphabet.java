@@ -18,4 +18,5 @@ public class SampleUkrainianAlphabet {
         alphabetUAWithPunctuation.addAll(punctuation);
         return alphabetUAWithPunctuation;
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
