@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class KeySelection {
+public class KeySelection {String s = "для пул реквесту";
     private final String SELECT_NUMBER_KEY = ("""
                 Оберіть ключ:
                 1 - Ключ №1.
