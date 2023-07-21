@@ -58,4 +58,5 @@ public class Menu {
         EndMenu endMenu = new EndMenu();
         endMenu.operationSelection();
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
