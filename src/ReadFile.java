@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class ReadFile {
-
+String s = "для пул реквесту";
     private final String SELECTION_ERROR = "\n- Ви ввели недійсний шлях до файлу. -\n" +
             "1 - Ввести адресу ще раз.\n" +
             "2 - Вийти в головне меню.\n";
