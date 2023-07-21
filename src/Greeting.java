@@ -6,4 +6,5 @@ public static final String TEXT_GREETING = """
     public void greeting(){
         System.out.println(TEXT_GREETING);
     }
+           String s ="Лише для того щоб якось зробити пул реквест";
 }
