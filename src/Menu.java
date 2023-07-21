@@ -5,16 +5,10 @@ public class Menu {
     ArrayList<Character> arrayListSourceEncryptFile;
     static ArrayList<Character> decryptionFile;
     static ArrayList<Character> decryptionFileForWrite;
-
-   /* public void setSourceEncryptFileFreeCodeKey(ArrayList<Character> sourceEncryptFileFreeCodeKey) {
-        this.sourceEncryptFileFreeCodeKey = sourceEncryptFileFreeCodeKey;
-    }*/
-
-
     int yourShiftKey;
+    int operationSelect;
 
     public void starting() {
-        int operationSelect;
         // Вибір операції - шифрування або розшифрування
         operationSelect = new Operation().operationSelection();
         switch (operationSelect) {
@@ -31,7 +25,6 @@ public class Menu {
 
         KeySelection keySelection = new KeySelection();
         yourShiftKey = keySelection.selectKey();
-        System.out.println(yourShiftKey);
 
         EncryptionProcess encryptionProcess = new EncryptionProcess(arrayListSourceFile, yourShiftKey);
 
@@ -40,8 +33,9 @@ public class Menu {
 
         WriteFile writeFile = new WriteFile(arrayListEncryptFile);
         writeFile.selectDirectoryFromWrite();
-        // EndMenu endMenu = new EndMenu();
-        // endMenu.operationSelection();
+
+        EndMenu endMenu = new EndMenu();
+        endMenu.operationSelection();
 
     }
 
@@ -60,5 +54,8 @@ public class Menu {
 
         WriteFileDecryption writeFileDecryption = new WriteFileDecryption(decryptionFileForWrite);
         writeFileDecryption.write();
+
+        EndMenu endMenu = new EndMenu();
+        endMenu.operationSelection();
     }
 }
