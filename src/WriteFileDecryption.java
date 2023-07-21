@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class WriteFileDecryption {
+public class WriteFileDecryption {String s = "для пул реквесту";
     String fileName;
     String fullNameOutFile;
     final String DIRECTORY_TO_SAVE_FILE = "\n- Новий файл буде збережено до директорії - ";
