@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class DecryptionMethod extends  ChoiceOfAction {
 
-
+String s = "для пул реквесту";
     private final String METHOD_WITH_KEY = "\n- Ви обрали метод з вибором ключа. -\n";
     private final String METHOD_BRUTEFORCE = "\n- Ви обрали метод Brute Force. -\n";
     private final String EXIT_MINE_MENU = "\n- Ви обрали вихід в головне меню програми. -\n";
