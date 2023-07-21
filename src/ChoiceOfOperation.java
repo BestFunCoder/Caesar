@@ -23,7 +23,7 @@ public class ChoiceOfOperation extends ChoiceOfAction {
 
     public void getSelectionPosition3() {
         System.out.println(SELECTION_POSITION_3);
-        Menu.starting();
+        new Menu().starting();
     }
 
     public void getSelectionPosition4() {
