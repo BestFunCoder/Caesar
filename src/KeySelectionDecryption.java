@@ -45,4 +45,5 @@ public class KeySelectionDecryption extends ChoiceOfAction{
         System.out.println(ERROR_CHOICE);
         operationSelection();
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
