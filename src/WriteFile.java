@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class WriteFile {
+public class WriteFile {String s = "для пул реквесту";
     String fileName;
     String fullNameOutFile;
     final String DIRECTORY_TO_SAVE_FILE = "- Новий файл буде збережено до директорії - ";
