@@ -40,4 +40,5 @@ public class KeySelection {
         }
         return yourShiftKey;
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
