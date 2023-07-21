@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Menu {
+public class Menu {String s = "для пул реквесту";
     ArrayList<Character> arrayListSourceFile;
     ArrayList<Character> arrayListSourceEncryptFile;
     static ArrayList<Character> decryptionFile;
