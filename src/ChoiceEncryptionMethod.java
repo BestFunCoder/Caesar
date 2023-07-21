@@ -24,4 +24,5 @@ public class ChoiceEncryptionMethod extends ChoiceOfOperation {
     public void getSelectionPosition2() {
         System.out.println(SELECTION_POSITION_2);
     }
+    String s ="Лише для того щоб якось зробити пул реквест";
 }
