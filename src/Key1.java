@@ -36,4 +36,5 @@ public class Key1 extends Keys{
     public int getINT_KEY() {
         return INT_KEY;
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
