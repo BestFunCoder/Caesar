@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class SeparateCodeKey {
+public class SeparateCodeKey {String s = "для пул реквесту";
     final int AMOUNT_CHARACTER_IN_CODE = 3;
     static ArrayList<Character> arrayListSourceEncryptFile;
     ArrayList<Character> separateKeyCode = new ArrayList<>();
