@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class DecryptionProcess {
+public class DecryptionProcess {String s = "для пул реквесту";
     SampleUkrainianAlphabet sampleUkrainianAlphabet = new SampleUkrainianAlphabet();
     ArrayList<Character> alphabetUAWithPunctuation = sampleUkrainianAlphabet.getAlphabetUAWithPunctuation();
     ArrayList<Character> punctuation = sampleUkrainianAlphabet.getPunctuation();
