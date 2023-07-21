@@ -37,4 +37,5 @@ public class EncryptionMethod {
         }
         return encryptMeth;
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
