@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class BruteForceKeyDetermination {
     private final ArrayList<Character> CONSTANT_CODE_KEY = new ArrayList<>(Arrays.asList('А', 'Б', 'В'));
     private final String KEY_FOUND = "- Ключ знайдено -";
-    private final String KEY_NOT_FOUND = "- Вірного ключа не знайдено. -";
+    
 
 
     ArrayList<Character> codeKey;
