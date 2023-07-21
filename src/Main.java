@@ -6,4 +6,5 @@ public class Main {
         //запуск програми
         new Menu().starting();
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
