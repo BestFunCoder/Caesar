@@ -1,4 +1,4 @@
-public  class Greeting {
+public  class Greeting {String s = "для пул реквесту";
 public static final String TEXT_GREETING = """
         === Вітаю в програмі-криптоаналізаторі \"Caesar\"! ===
         
