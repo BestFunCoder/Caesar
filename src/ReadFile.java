@@ -60,4 +60,5 @@ public class ReadFile {
         }
          return arrayCharSourceFile;
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
