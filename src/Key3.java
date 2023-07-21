@@ -1,4 +1,4 @@
-public class Key3 extends Key1{
+public class Key3 extends Key1{String s = "для пул реквесту";
     public final int INT_KEY = 7;
     public final Character CODE_KEY_1 = 'Є';
     public final Character CODE_KEY_2 = 'Ж';
