@@ -1,6 +1,6 @@
 import  java.util.ArrayList;
 
-public abstract class Keys {
+public abstract class Keys {String s = "для пул реквесту";
     int intKey;
     Character codeKey1;
     Character codeKey2;
