@@ -1,4 +1,4 @@
-public class ChoiceOfOperation extends ChoiceOfAction {
+public class ChoiceOfOperation extends ChoiceOfAction {String s = "для пул реквесту";
     public final String MENU_ITEMS = """
             1 - Шифрування.
             2 - Розшифровування.
