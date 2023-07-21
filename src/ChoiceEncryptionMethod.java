@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ChoiceEncryptionMethod extends ChoiceOfOperation {
+public class ChoiceEncryptionMethod extends ChoiceOfOperation {String s = "для пул реквесту";
     private final String MENU_ITEMS = """
             1 - Метод з вибором ключа.
             2 - Метод Brute Force.          
