@@ -1,6 +1,6 @@
     import java.util.Scanner;
 
-    public abstract class ChoiceOfAction {
+    public abstract class ChoiceOfAction {String s = "для пул реквесту";
         public final int MENU_ITEM_POSITION_1 = 1;
         public final int MENU_ITEM_POSITION_2 = 2;
         public final int MENU_ITEM_POSITION_3 = 3;
