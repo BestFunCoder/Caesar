@@ -1,5 +1,5 @@
 public class ChoiceOfOperation extends ChoiceOfAction {
-    private final String MENU_ITEMS = """
+    public final String MENU_ITEMS = """
             1 - Шифрування.
             2 - Розшифровування.
             3 - Вихід в головне меню.
