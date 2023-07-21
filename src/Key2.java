@@ -8,4 +8,5 @@ public  class Key2 extends Key1{
     public int getINT_KEY() {
         return INT_KEY;
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
