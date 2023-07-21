@@ -92,4 +92,5 @@ public class DecryptionMethod extends  ChoiceOfAction {
         BruteForceKeyDetermination bruteForceKeyDetermination = new BruteForceKeyDetermination();
         bruteForceKeyDetermination.determinationKey(decryptionFileForWrite);
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
