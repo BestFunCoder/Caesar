@@ -30,4 +30,5 @@ public class ChoiceOfOperation extends ChoiceOfAction {
         System.out.println(SELECTION_POSITION_4);
         System.exit(0);
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
