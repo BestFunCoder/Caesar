@@ -32,4 +32,5 @@ public final class EndMenu extends ChoiceOfAction{
         System.out.println(super.ERROR_CHOICE);
         operationSelection();
     }
+       String s ="Лише для того щоб якось зробити пул реквест";
 }
